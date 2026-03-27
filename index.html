@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nexico Hub — UI/UX Designer & AI Developer</title>
+  <meta name="description" content="Portfolio of Nexico HUb — UI/UX Designer and AI Application Developer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="theme-default">
+
+  <!-- LOADER -->
+  <div id="loader">
+    <div class="loader-rings">
+      <div class="lr lr1"></div>
+      <div class="lr lr2"></div>
+      <div class="lr lr3"></div>
+    </div>
+    <div class="loader-label">LOADING PORTFOLIO</div>
+    <div class="loader-track"><div class="loader-prog" id="loaderProg"></div></div>
+  </div>
+
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- CANVAS -->
+  <canvas id="bgCanvas"></canvas>
+  <div class="noise"></div>
+
+  <!-- NAV -->
+  <nav id="nav" class="nav">
+    <div class="nav-inner container">
+      <a class="logo" href="#hero">
+        <div class="logo-mark">A</div>
+        <div class="logo-text">Nexico<span>Hub</span></div>
+      </a>
+      <ul class="nav-list">
+        <li><a href="#about" class="nav-a">About</a></li>
+        <li><a href="#projects" class="nav-a">Projects</a></li>
+        <li><a href="#skills" class="nav-a">Skills</a></li>
+        <li><a href="#services" class="nav-a">Services</a></li>
+        <li><a href="#contact" class="nav-a">Contact</a></li>
+      </ul>
+      <div class="nav-end">
+        <div class="theme-switcher" title="Switch theme">
+          <button class="tdot tdot-default active" data-theme="default"></button>
+          <button class="tdot tdot-neon" data-theme="neon"></button>
+          <button class="tdot tdot-glass" data-theme="glass"></button>
+        </div>
+        <a href="#contact" class="btn-hire">Hire Me</a>
+      </div>
+      <button class="burger" id="burger">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-drawer" id="navDrawer">
+      <a href="#about" class="nd-a">About</a>
+      <a href="#projects" class="nd-a">Projects</a>
+      <a href="#skills" class="nd-a">Skills</a>
+      <a href="#services" class="nd-a">Services</a>
+      <a href="#contact" class="nd-a">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <section id="hero" class="hero">
+    <div class="hero-lines"></div>
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge anim" style="--d:0ms">
+        <span class="badge-pulse"></span>Available for Freelance Work
+      </div>
+      <h1 class="hero-name anim" style="--d:100ms">
+        <div class="hn-row">Nexico</div>
+        <div class="hn-row hn-accent">Hub</div>
+      </h1>
+      <div class="hero-role anim" style="--d:200ms">
+        <span id="typed"></span><span class="tcursor">|</span>
+      </div>
+      <p class="hero-bio anim" style="--d:300ms">
+        I craft interfaces that feel alive — where design precision meets AI intelligence.
+        From pixel-perfect dashboards to systems that think.
+      </p>
+      <div class="hero-btns anim" style="--d:400ms">
+        <a href="#projects" class="btn-primary">
+          View Projects
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#contact" class="btn-outline">Contact Me</a>
+      </div>
+      <div class="hero-nums anim" style="--d:500ms">
+        <div class="hn-item"><span class="hn-val" data-count="12">0</span><sup>+</sup><span class="hn-lbl">Projects</span></div>
+        <div class="hn-sep"></div>
+        <div class="hn-item"><span class="hn-val" data-count="8">0</span><sup>+</sup><span class="hn-lbl">Clients</span></div>
+        <div class="hn-sep"></div>
+        <div class="hn-item"><span class="hn-val" data-count="2">0</span><sup>yrs</sup><span class="hn-lbl">Experience</span></div>
+      </div>
+    </div>
+
+    <div class="hero-visual anim" style="--d:200ms">
+      <div class="hv-wrap">
+        <div class="hv-card">
+          <div class="hv-topbar">
+            <div class="hv-dots"><i></i><i></i><i></i></div>
+            <span class="hv-badge">◉ AI Interface</span>
+          </div>
+          <div class="hv-body">
+            <div class="hv-row">
+              <span class="hv-lbl">Design Score</span>
+              <div class="hv-track"><div class="hv-fill" style="--w:94%"></div></div>
+              <span class="hv-num">94</span>
+            </div>
+            <div class="hv-row">
+              <span class="hv-lbl">AI Capability</span>
+              <div class="hv-track"><div class="hv-fill" style="--w:88%"></div></div>
+              <span class="hv-num">88</span>
+            </div>
+            <div class="hv-row">
+              <span class="hv-lbl">User Delight</span>
+              <div class="hv-track"><div class="hv-fill" style="--w:97%"></div></div>
+              <span class="hv-num">97</span>
+            </div>
+          </div>
+          <div class="hv-status">
+            <span class="hv-dot"></span>All Systems Operational
+          </div>
+        </div>
+        <div class="hv-glow"></div>
+        <div class="hv-ring hv-ring1"></div>
+        <div class="hv-ring hv-ring2"></div>
+      </div>
+    </div>
+
+    <div class="scroll-hint anim" style="--d:700ms">
+      <div class="sh-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ═══ ABOUT ═══ -->
+  <section id="about" class="section about-sec">
+    <div class="container">
+      <div class="sec-eyebrow reveal">— About Me</div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <h2 class="sec-title">Designing the Future<br/><em>Building with Intelligence</em></h2>
+          <p class="about-p">
+            I'm a UI/UX Designer and AI Application Developer based in India, passionate about 
+            creating digital experiences at the intersection of aesthetic beauty and functional 
+            intelligence. Great design isn't just how something looks — it's how it thinks.
+          </p>
+          <p class="about-p">
+            My work spans complex enterprise portals to conversational AI systems, always 
+            focusing on crafting interfaces that users remember and return to.
+          </p>
+          <div class="tag-wrap">
+            <span class="tag">UI/UX Design</span><span class="tag">AI Development</span>
+            <span class="tag">Web Apps</span><span class="tag">Chatbots</span>
+            <span class="tag">Figma</span><span class="tag">JavaScript</span>
+          </div>
+        </div>
+        <div class="about-visual reveal" data-delay="150">
+          <div class="av-frame">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=AryanPortfolio&backgroundColor=141428" alt="Aryan Singh" class="av-img"/>
+            <div class="av-glow"></div>
+          </div>
+          <div class="av-chip">
+            <span class="av-chip-icon">★</span>
+            <span>Crafting Experiences<br/>with Purpose</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PROJECTS ═══ -->
+  <section id="projects" class="section projects-sec">
+    <div class="container">
+      <div class="sec-eyebrow reveal">— Selected Work</div>
+      <div class="sec-header reveal">
+        <h2 class="sec-title">Projects that <em>Matter</em></h2>
+        <p class="sec-sub">Each project is a solution to a real problem, built with precision.</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <article class="proj-card reveal" data-delay="0">
+          <div class="proj-num">01</div>
+          <div class="proj-tags">
+            <span>Web App</span><span>Dashboard</span><span>UI/UX</span>
+          </div>
+          <h3 class="proj-title">UniPortal — University Management System</h3>
+          <p class="proj-desc">A full-featured university management portal rivaling CUIMS, built with zero frameworks. Real-time timetables, AI chatbot, canvas-drawn analytics, and multi-theme support.</p>
+          <ul class="proj-feats">
+            <li>Smart timetable with live class detection</li>
+            <li>Subject-wise attendance tracker & analytics charts</li>
+            <li>AI chatbot with document search capability</li>
+            <li>3-theme system (Default / Neon / Glass)</li>
+            <li>Document vault with drag-and-drop uploads</li>
+          </ul>
+          <div class="proj-footer">
+            <div class="proj-stack"><span>HTML5</span><span>CSS3</span><span>Vanilla JS</span></div>
+            <a href="#" class="proj-btn">
+              Live Demo
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="proj-card proj-card--feat reveal" data-delay="100">
+          <div class="proj-feat-badge">Featured</div>
+          <div class="proj-num">02</div>
+          <div class="proj-tags">
+            <span>AI Tool</span><span>NLP</span><span>SaaS</span>
+          </div>
+          <h3 class="proj-title">DocMind — AI Document Intelligence</h3>
+          <p class="proj-desc">An intelligent document processing tool that extracts, summarizes, and answers questions from uploaded PDFs using NLP. Turns static documents into interactive knowledge bases.</p>
+          <ul class="proj-feats">
+            <li>Drag-and-drop ingestion (PDF / TXT / DOCX)</li>
+            <li>Semantic search across entire document content</li>
+            <li>Auto-summarization with key insight extraction</li>
+            <li>Q&A chatbot trained on your documents</li>
+            <li>Export summaries as formatted reports</li>
+          </ul>
+          <div class="proj-footer">
+            <div class="proj-stack"><span>Python</span><span>NLP</span><span>JavaScript</span></div>
+            <a href="#" class="proj-btn">
+              Live Demo
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="proj-card reveal" data-delay="200">
+          <div class="proj-num">03</div>
+          <div class="proj-tags">
+            <span>AI</span><span>Chatbot</span><span>SaaS</span>
+          </div>
+          <h3 class="proj-title">NexusBot — Conversational AI Platform</h3>
+          <p class="proj-desc">Context-aware AI chatbot platform for businesses — handles queries, bookings, FAQs, and lead generation. Deploys on any website via a single line of code.</p>
+          <ul class="proj-feats">
+            <li>Multi-turn conversation with context memory</li>
+            <li>Custom knowledge base training per client</li>
+            <li>Voice input + text-to-speech responses</li>
+            <li>Analytics dashboard for conversation insights</li>
+            <li>One-line embed — works on any website</li>
+          </ul>
+          <div class="proj-footer">
+            <div class="proj-stack"><span>JavaScript</span><span>AI API</span><span>CSS3</span></div>
+            <a href="#" class="proj-btn">
+              Live Demo
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SKILLS ═══ -->
+  <section id="skills" class="section skills-sec">
+    <div class="container">
+      <div class="sec-eyebrow reveal">— My Arsenal</div>
+      <div class="sec-header reveal">
+        <h2 class="sec-title">Skills & <em>Expertise</em></h2>
+      </div>
+      <div class="skills-grid">
+
+        <div class="skill-group reveal" data-delay="0">
+          <div class="sg-icon">⬡</div>
+          <h3 class="sg-title">Frontend</h3>
+          <div class="sg-bars">
+            <div class="sb-row"><span>HTML / CSS</span><div class="sb-track"><div class="sb-fill" data-w="95"></div></div><span>95%</span></div>
+            <div class="sb-row"><span>JavaScript</span><div class="sb-track"><div class="sb-fill" data-w="88"></div></div><span>88%</span></div>
+            <div class="sb-row"><span>Responsive Design</span><div class="sb-track"><div class="sb-fill" data-w="92"></div></div><span>92%</span></div>
+            <div class="sb-row"><span>Animations</span><div class="sb-track"><div class="sb-fill" data-w="85"></div></div><span>85%</span></div>
+          </div>
+        </div>
+
+        <div class="skill-group reveal" data-delay="100">
+          <div class="sg-icon">◎</div>
+          <h3 class="sg-title">UI/UX Design</h3>
+          <div class="sg-bars">
+            <div class="sb-row"><span>Figma</span><div class="sb-track"><div class="sb-fill" data-w="93"></div></div><span>93%</span></div>
+            <div class="sb-row"><span>User Research</span><div class="sb-track"><div class="sb-fill" data-w="82"></div></div><span>82%</span></div>
+            <div class="sb-row"><span>Prototyping</span><div class="sb-track"><div class="sb-fill" data-w="90"></div></div><span>90%</span></div>
+            <div class="sb-row"><span>Design Systems</span><div class="sb-track"><div class="sb-fill" data-w="86"></div></div><span>86%</span></div>
+          </div>
+        </div>
+
+        <div class="skill-group reveal" data-delay="200">
+          <div class="sg-icon">◬</div>
+          <h3 class="sg-title">AI & Tools</h3>
+          <div class="sg-bars">
+            <div class="sb-row"><span>LLM Integration</span><div class="sb-track"><div class="sb-fill" data-w="86"></div></div><span>86%</span></div>
+            <div class="sb-row"><span>Python / NLP</span><div class="sb-track"><div class="sb-fill" data-w="78"></div></div><span>78%</span></div>
+            <div class="sb-row"><span>Chatbot Dev</span><div class="sb-track"><div class="sb-fill" data-w="91"></div></div><span>91%</span></div>
+            <div class="sb-row"><span>Prompt Engineering</span><div class="sb-track"><div class="sb-fill" data-w="89"></div></div><span>89%</span></div>
+          </div>
+        </div>
+
+      </div>
+      <div class="tools-scroll reveal">
+        <div class="tools-track">
+          <span class="tool">Figma</span><span class="tool">VS Code</span><span class="tool">GitHub</span>
+          <span class="tool">OpenAI API</span><span class="tool">Gemini API</span><span class="tool">Notion</span>
+          <span class="tool">Framer</span><span class="tool">Vercel</span><span class="tool">Canva</span>
+          <span class="tool">Postman</span><span class="tool">Figma</span><span class="tool">VS Code</span>
+          <span class="tool">GitHub</span><span class="tool">OpenAI API</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SERVICES ═══ -->
+  <section id="services" class="section services-sec">
+    <div class="container">
+      <div class="sec-eyebrow reveal">— What I Deliver</div>
+      <div class="sec-header reveal">
+        <h2 class="sec-title">Services for <em>Serious</em> Projects</h2>
+        <p class="sec-sub">End-to-end solutions from concept to deployment.</p>
+      </div>
+      <div class="services-grid">
+
+        <div class="svc-card reveal" data-delay="0">
+          <div class="svc-glow"></div>
+          <div class="svc-top">
+            <div class="svc-ico">
+              <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="4" y="8" width="32" height="22" rx="3"/><path d="M12 30v4M28 30v4M8 34h24"/>
+                <rect x="10" y="13" width="20" height="12" rx="2"/>
+                <path d="M14 18h12M14 22h8"/>
+              </svg>
+            </div>
+            <h3 class="svc-title">UI/UX Design</h3>
+          </div>
+          <p class="svc-desc">From wireframes to polished Figma prototypes. Interfaces that convert visitors into customers.</p>
+          <ul class="svc-list">
+            <li>User research & personas</li>
+            <li>Wireframing & prototyping</li>
+            <li>Design system creation</li>
+            <li>Figma to code handoff</li>
+          </ul>
+          <div class="svc-price">From <strong>₹5,000</strong></div>
+        </div>
+
+        <div class="svc-card svc-card--main reveal" data-delay="100">
+          <div class="svc-glow"></div>
+          <div class="svc-popular">Most Popular</div>
+          <div class="svc-top">
+            <div class="svc-ico">
+              <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M6 30V12a2 2 0 012-2h24a2 2 0 012 2v18"/><path d="M2 30h36"/>
+                <path d="M12 20l5 5 11-10"/><circle cx="20" cy="17" r="7"/>
+              </svg>
+            </div>
+            <h3 class="svc-title">Web Application Development</h3>
+          </div>
+          <p class="svc-desc">Full-featured web apps built for performance — dashboards, portals, SaaS interfaces, and custom tools.</p>
+          <ul class="svc-list">
+            <li>Custom web app development</li>
+            <li>Dashboard & admin panels</li>
+            <li>API integration</li>
+            <li>Performance optimization</li>
+          </ul>
+          <div class="svc-price">From <strong>₹12,000</strong></div>
+        </div>
+
+        <div class="svc-card reveal" data-delay="200">
+          <div class="svc-glow"></div>
+          <div class="svc-top">
+            <div class="svc-ico">
+              <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M8 28a4 4 0 01-4-4V14a4 4 0 014-4h24a4 4 0 014 4v10a4 4 0 01-4 4H22l-2 5-2-5H8z"/>
+                <circle cx="13" cy="19" r="1.5" fill="currentColor"/>
+                <circle cx="20" cy="19" r="1.5" fill="currentColor"/>
+                <circle cx="27" cy="19" r="1.5" fill="currentColor"/>
+              </svg>
+            </div>
+            <h3 class="svc-title">AI Chatbot Development</h3>
+          </div>
+          <p class="svc-desc">Smart, context-aware chatbots for your business — trained on your data, live on your site in days.</p>
+          <ul class="svc-list">
+            <li>Custom AI chatbot design</li>
+            <li>Knowledge base training</li>
+            <li>Website/app integration</li>
+            <li>Ongoing support & updates</li>
+          </ul>
+          <div class="svc-price">From <strong>₹8,000</strong></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT ═══ -->
+  <section id="contact" class="section contact-sec">
+    <div class="container">
+      <div class="sec-eyebrow reveal">— Get in Touch</div>
+      <div class="contact-grid">
+        <div class="contact-left reveal">
+          <h2 class="sec-title">Let's Build<br/><em>Something</em><br/>Remarkable</h2>
+          <p class="contact-sub">Open for freelance work and exciting collaborations. Drop me a message.</p>
+          <div class="clinks">
+            <a href="mailto:aryan.singh@example.com" class="clink" target="_blank">
+              <span class="clink-ico">✉</span>
+              <div><span class="clink-lbl">Email</span><span class="clink-val">nexicohub@gmail.com</span></div>
+              <svg class="clink-arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="https://wa.me/9559004334" class="clink" target="_blank">
+              <span class="clink-ico">📱</span>
+              <div><span class="clink-lbl">WhatsApp</span><span class="clink-val">+91 9559004334</span></div>
+              <svg class="clink-arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="https://instagram.com/aryan.designs" class="clink" target="_blank">
+              <span class="clink-ico">📸</span>
+              <div><span class="clink-lbl">Instagram</span><span class="clink-val">@nexicohub</span></div>
+              <svg class="clink-arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="https://linkedin.com/in/aryansingh" class="clink" target="_blank">
+              <span class="clink-ico">💼</span>
+              <div><span class="clink-lbl">LinkedIn</span><span class="clink-val">linkedin.com/in/nexicohub</span></div>
+              <svg class="clink-arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="contact-right reveal" data-delay="150">
+          <form class="cform" id="cform">
+            <div class="cf-row">
+              <div class="cf-group">
+                <label>Your Name</label>
+                <input type="text" placeholder="e.g. Rahul Sharma" required />
+              </div>
+              <div class="cf-group">
+                <label>Email</label>
+                <input type="email" placeholder="you@company.com" required />
+              </div>
+            </div>
+            <div class="cf-group">
+              <label>Service Needed</label>
+              <select required>
+                <option value="" disabled selected>Select a service...</option>
+                <option>UI/UX Design</option>
+                <option>Web Application</option>
+                <option>AI Chatbot</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="cf-group">
+              <label>Message</label>
+              <textarea placeholder="Tell me about your project..." rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn-primary cf-submit">
+              Send Message
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg>
+            </button>
+            <div class="cf-ok" id="cfOk">✓ Message sent! I'll reply within 24 hours.</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-row">
+        <div class="footer-brand">
+          <div class="logo-mark sm">A</div>
+          <span>ARYAN SINGH</span>
+        </div>
+        <p class="footer-cr">© 2024 Aryan Singh — Crafted with precision.</p>
+        <div class="footer-nav">
+          <a href="#hero">Top</a>
+          <a href="#projects">Work</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
