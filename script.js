@@ -1,7 +1,3 @@
-
-
-
-
   // Kavya Kushwaha— script.js
    //All interactivity, animations, canvas, etc.
 //════════════════════════════════════════════ */
